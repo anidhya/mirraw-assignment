@@ -1,0 +1,15 @@
+<a href="javascript:void(0)" id="parse">Parse</a>
+<div id="result"></div>
+
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		$("#parse").click(function(){
+			$("#result").html("Scrapping data...this might take some time..Please wait.");
+			$.get('/parse', function(data){
+				console.log(data);
+				$("#result").html(data['data']);
+			});
+		});
+	});
+</script>

@@ -1,0 +1,15 @@
+<% if data.present? %>
+
+	<% data.each do |designer_name, designers_data| %>
+		
+	<ul> 
+		<li><%= designer_name %></li>
+		<ul>
+			<% designers_data.each do |design| %>
+			<li><%= design[:design_name] %> : <%= design[:design_price] %> </li>
+			<% end %>
+		</ul>
+	</ul>
+	<% end %>
+
+<% end %>
